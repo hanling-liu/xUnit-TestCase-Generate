@@ -17,6 +17,8 @@
         <scala.version>2.11</scala.version>
         <akka.version>2.3.5</akka.version>
 		<scala.library.version>2.11.1</scala.library.version>
+        <scala-lib.version>2.11.5</scala-lib.version>
+        <scalatest.version>2.2.4</scalatest.version>
     </properties>
 
     <dependencyManagement>
@@ -58,8 +60,16 @@
                 <artifactId>scala-library</artifactId>
                 <version>${scala.library.version}</version>
             </dependency>
-        </dependencies>
 
+            <!-- scala-test -->
+            <dependency>
+                <groupId>org.scalatest</groupId>
+                <artifactId>scalatest_${scala.version}</artifactId>
+                <version>${scalatest.version}</version>
+                <scope>test</scope>
+            </dependency>
+
+        </dependencies>
     </dependencyManagement>
 
 
